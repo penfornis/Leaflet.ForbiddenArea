@@ -10,7 +10,8 @@
             distanceForbiddenArea: 60,
             msgForbidden: 'Other marker are too close !',
             forbiddenIcon: undefined,
-            title: 'Draw a forbidden marker'
+            title: 'Draw a forbidden marker',
+            msgTooltip: 'Click map to place marker',
         },
 
         initialize: function(map, options) {
@@ -82,7 +83,7 @@
               }
             } else {
                 marker.setOpacity(0);
-                this._tooltip.updateContent({ text: 'Click map to place marker' });
+                this._tooltip.updateContent({ text: this.options.msgTooltip });
             }
         },
 
